@@ -1,0 +1,9 @@
+{
+    "locale": "es-ES",
+    "messages": {
+        "home":{
+          "shortDescription": "Montevideo",
+          "footerDescription": "<strong>Montevideo</strong> <a href=\"mailto:sales@Montevideo.com\">sales@Montevideo.com</a>"
+        }
+    }
+}

@@ -1,6 +1,5 @@
 {
   "type": "cascade",
-  "resources": [],
   "settings": {
     "theme": {
       "general": {
@@ -16,11 +15,130 @@
       }
     }
   },
+  "resources": [
+    {
+      "id": "2ff5f25d-53eb-45e4-891b-85f32fb33ed9",
+      "type": "map",
+      "data": {
+        "center": {
+          "x": 11.22894105149402,
+          "y": 43.380053862794,
+          "crs": "EPSG:4326"
+        },
+        "maxExtent": [-20037508.34, -20037508.34, 20037508.34, 20037508.34],
+        "projection": "EPSG:900913",
+        "units": "m",
+        "zoom": 5,
+        "mapOptions": {},
+        "backgrounds": [],
+        "bookmark_search_config": {},
+        "id": 14,
+        "groups": [],
+        "layers": [
+          {
+            "id": "mapnik__0",
+            "group": "background",
+            "source": "osm",
+            "name": "mapnik",
+            "title": "Open Street Map",
+            "type": "osm",
+            "visibility": true,
+            "singleTile": false,
+            "dimensions": [],
+            "hideLoading": false,
+            "handleClickOnLayer": false,
+            "useForElevation": false,
+            "hidden": false
+          },
+          {
+            "id": "Night2012__1",
+            "group": "background",
+            "source": "nasagibs",
+            "name": "Night2012",
+            "provider": "NASAGIBS.ViirsEarthAtNight2012",
+            "title": "NASAGIBS Night 2012",
+            "type": "tileprovider",
+            "visibility": false,
+            "singleTile": false,
+            "dimensions": [],
+            "hideLoading": false,
+            "handleClickOnLayer": false,
+            "useForElevation": false,
+            "hidden": false
+          },
+          {
+            "id": "OpenTopoMap__2",
+            "group": "background",
+            "source": "OpenTopoMap",
+            "name": "OpenTopoMap",
+            "provider": "OpenTopoMap",
+            "title": "OpenTopoMap",
+            "type": "tileprovider",
+            "visibility": false,
+            "singleTile": false,
+            "dimensions": [],
+            "hideLoading": false,
+            "handleClickOnLayer": false,
+            "useForElevation": false,
+            "hidden": false
+          },
+          {
+            "id": "s2cloudless:s2cloudless__3",
+            "format": "image/jpeg",
+            "group": "background",
+            "source": "s2cloudless",
+            "name": "s2cloudless:s2cloudless",
+            "opacity": 1,
+            "title": "Sentinel 2 Cloudless",
+            "type": "wms",
+            "url": [
+              "https://1maps.geo-solutions.it/geoserver/wms",
+              "https://2maps.geo-solutions.it/geoserver/wms",
+              "https://3maps.geo-solutions.it/geoserver/wms",
+              "https://4maps.geo-solutions.it/geoserver/wms",
+              "https://5maps.geo-solutions.it/geoserver/wms",
+              "https://6maps.geo-solutions.it/geoserver/wms"
+            ],
+            "visibility": false,
+            "singleTile": false,
+            "dimensions": [],
+            "hideLoading": false,
+            "handleClickOnLayer": false,
+            "useForElevation": false,
+            "hidden": false
+          },
+          {
+            "id": "undefined__4",
+            "group": "background",
+            "source": "ol",
+            "title": "Empty Background",
+            "type": "empty",
+            "visibility": false,
+            "singleTile": false,
+            "dimensions": [],
+            "hideLoading": false,
+            "handleClickOnLayer": false,
+            "useForElevation": false,
+            "hidden": false
+          }
+        ],
+        "attributes": "null",
+        "detailsSettings": "{}",
+        "creation": "2023-06-22T16:15:01.235+02:00",
+        "canDelete": true,
+        "canEdit": true,
+        "name": "test",
+        "description": "",
+        "thumbnail": "",
+        "type": "map"
+      }
+    }
+  ],
   "sections": [
     {
       "type": "title",
-      "id": "title_section_id1",
-      "title": "Abstract",
+      "id": "00fa9610-1112-11ee-9615-e372c50e5700",
+      "title": "The Map",
       "cover": true,
       "contents": [
         {
@@ -29,11 +147,13 @@
           "size": "large",
           "align": "center",
           "theme": "",
-          "html": "",
+          "html": "<h1>The map</h1>",
           "background": {
             "fit": "cover",
             "size": "full",
-            "align": "center"
+            "align": "center",
+            "resourceId": "2ff5f25d-53eb-45e4-891b-85f32fb33ed9",
+            "type": "map"
           }
         }
       ]

@@ -5,24 +5,27 @@
  * This source code is licensed under the BSD-style license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-import { checkForMissingPlugins } from '@mapstore/utils/DebugUtils';
 import main from '@mapstore/product/main';
+import { checkForMissingPlugins } from '@mapstore/utils/DebugUtils';
+
+import "../assets/css/custom.css";
+
 const ConfigUtils = require('@mapstore/utils/ConfigUtils').default;
+
 /**
  * Add custom (overriding) translations with:
  *
  * ConfigUtils.setConfigProp('translationsPath', ['./MapStore2/web/client/translations', './translations']);
  */
-ConfigUtils.setConfigProp('translationsPath', './MapStore2/web/client/translations');
+ConfigUtils.setConfigProp('translationsPath', ['./MapStore2/web/client/translations', './translations']);
 ConfigUtils.setConfigProp('themePrefix', 'ms3-training');
 
 /**
  * Use a custom plugins configuration file with:
  *
- * ConfigUtils.setLocalConfigurationFile('localConfig.json');
+ * ConfigUtils.setLocalConfigurationFile('configs/localConfig.json');
  */
-ConfigUtils.setLocalConfigurationFile('MapStore2/web/client/configs/localConfig.json');
+ConfigUtils.setLocalConfigurationFile('configs/localConfig.json');
 
 /**
  * Use a custom application configuration file with:

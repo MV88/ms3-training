@@ -1,0 +1,10 @@
+{
+    "locale": "en-US",
+    "messages": {
+      "home":{
+
+        "shortDescription": "Montevideo version of Mapstore",
+        "footerDescription": "<strong>Montevideo</strong> <a href=\"mailto:sales@Montevideo.com\">sales@Montevideo.com</a>"
+      }
+    }
+}
