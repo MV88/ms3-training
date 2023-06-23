@@ -7,6 +7,7 @@
  */
 import main from '@mapstore/product/main';
 import { checkForMissingPlugins } from '@mapstore/utils/DebugUtils';
+import AppPlugins from '@js/plugins';
 
 import "../assets/css/custom.css";
 
@@ -48,8 +49,8 @@ const appConfig = require('@mapstore/product/appConfig').default;
  *
  * const plugins = require('./plugins');
  */
-const plugins = require('@mapstore/product/plugins').default;
+// const plugins = require('@mapstore/product/plugins').default;
 
-checkForMissingPlugins(plugins.plugins);
+checkForMissingPlugins(AppPlugins.plugins);
 
-main(appConfig, plugins);
+main(appConfig, AppPlugins);

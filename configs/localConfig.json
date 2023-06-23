@@ -467,6 +467,7 @@
                 "declineUrl" : "http://www.google.com"
                 }
             },
+            { "name": "HelloWorld" },
             "OmniBar", "Login", "Save", "SaveAs", "Expander", "Undo", "Redo", "FullScreen", "GlobeViewSwitcher", "SearchServicesConfig", "SearchByBookmark", "WidgetsBuilder", "Widgets",
             "WidgetsTray",
             {
