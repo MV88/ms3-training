@@ -11,7 +11,6 @@ import { checkForMissingPlugins } from '@mapstore/utils/DebugUtils';
 import "../assets/css/custom.css";
 
 const ConfigUtils = require('@mapstore/utils/ConfigUtils').default;
-
 /**
  * Add custom (overriding) translations with:
  *

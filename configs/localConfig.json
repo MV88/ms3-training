@@ -57,12 +57,20 @@
       {"name": "geostorymode", "path": "geostory.mode"},
       {"name": "featuregridmode", "path": "featuregrid.mode"},
       {"name": "userrole", "path": "security.user.role"},
-      {"name": "printEnabled", "path": "print.capabilities"}
+      {"name": "printEnabled", "path": "print.capabilities"},
+      {"name": "maptype", "path": "maptype.mapType"}
     ],
     "userSessions": {
       "enabled": true
     },
-    "projectionDefs": [],
+    "projectionDefs": [
+      {
+        "code": "EPSG:3003",
+        "def": "+proj=tmerc +lat_0=0 +lon_0=9 +k=0.9996 +x_0=1500000 +y_0=0 +ellps=intl+towgs84=-104.1,-49.1,-9.9,0.971,-2.917,0.714,-11.68 +units=m +no_defs",
+        "extent": [1241482.0019, 973563.1609, 1830078.9331, 5215189.0853],
+        "worldExtent": [6.6500, 8.8000, 12.0000, 47.0500]
+      }
+    ],
     "initialState": {
       "defaultState": {
         "annotations": {
@@ -87,9 +95,9 @@
             "selectedService": "gs_stable_csw",
             "services": {
               "gs_stable_csw": {
-                "url": "https://gs-stable.geo-solutions.it/geoserver/csw",
-                "type": "csw",
-                "title": "GeoSolutions GeoServer CSW",
+                "url": "https://gs-stable.geo-solutions.it/geoserver/wfs",
+                "type": "wfs",
+                "title": "GeoSolutions GeoServer WFS",
                 "autoload": true
               },
               "gs_stable_wms": {
@@ -116,20 +124,6 @@
                     "title": "Open Street Map",
                     "name": "mapnik",
                     "source": "osm",
-                    "group": "background"
-                }, {
-                    "type": "tileprovider",
-                    "title": "NASAGIBS Night 2012",
-                    "provider": "NASAGIBS.ViirsEarthAtNight2012",
-                    "name": "Night2012",
-                    "source": "nasagibs",
-                    "group": "background"
-                }, {
-                    "type": "tileprovider",
-                    "title": "OpenTopoMap",
-                    "provider": "OpenTopoMap",
-                    "name": "OpenTopoMap",
-                    "source": "OpenTopoMap",
                     "group": "background"
                 }, {
                     "format": "image/jpeg",
@@ -314,6 +308,7 @@
             {
               "name": "Share",
               "cfg": {
+                "disablePluginIf": "{state('maptype') === 'openlayers'}",
                 "advancedSettings": {
                   "bbox": true,
                   "centerAndZoom": true
@@ -413,7 +408,9 @@
               "name": "CRSSelector",
               "cfg": {
                 "additionalCRS": {
-
+                  "EPSG:3003": {
+                    "label": "Monte Mario"
+                  }
                 },
                 "filterAllowedCRS": [
                   "EPSG:4326",
@@ -707,7 +704,6 @@
           },
           { "name": "Share",
             "cfg": {
-              "embedPanel": false,
               "showAPI": false,
               "advancedSettings": false,
               "shareUrlRegex": "(h[^#]*)#\\/dashboard\\/([A-Za-z0-9]*)",
@@ -862,6 +858,7 @@
             "cfg": {
               "embedPanel": false,
               "showAPI": false,
+              "showEmbed": false,
               "embedOptions": {
                 "showTOCToggle": false,
                 "allowFullScreen":false
